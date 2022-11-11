@@ -4,58 +4,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@1&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>ProgramacionDePocosRequisitos</title>
 </head>
 <style>
-   
+    *{
+        padding:0;
+        margin: 0;
+    }
+    :root{
+        --primary-color: rgb(237, 237, 209);
+        --secondary-color: rgb(112, 112, 117);
 
-    .head{
+        --very-light-color: rgb(230, 238, 255);
+
+        --sm: 12px;
+        --md: 16px;
+        --lg: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    
+
+    body{
+        width: 100%;
+        background-color: var(--primary-color);
+    }
+   
+    header{
+        margin: 15px;
+        margin-bottom: 0;
+        height: 70px;
+        display:grid;
+        grid-template-columns:auto auto ;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header h1{
+        position: relative;
+        left: 50px;
+        font-size: var(--lg);
+    }
+
+
+    header div{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        border-bottom: 2px solid black;
+        justify-content: center;
     }
-    .head h1{
-        font-size: 20px;
+    
+    header div button{
+        color: var(--primary-color);
+        width: 120px;
+        height: 30px;
+        margin: 10px;
+        background-color: var(--secondary-color);
     }
-    .head nav ul{
+
+    header div button:hover{
+            color: black;
+            background-color: var(--primary-color);
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: end;
+        border-bottom: 2px solid var(--secondary-color);
+    }
+    .navbar nav ul{
         display: flex;
     }
 
-    .head nav ul li{
+    .navbar nav ul li{
         list-style: none;
         margin: 8px;
         padding: 8px;
-        border: 1px solid gray;
+        border: 1px solid var(--secondary-color);
     }
 
-    .head nav ul li a{
+    .navbar nav ul li a{
         text-decoration: none;
         color: black;
     }
 
-    .head nav ul li a:hover{
+    .navbar nav ul li a:hover{
         text-decoration: underline;
-        color: white;
+        color: var(--primary-color);
     }
 
-    .head nav ul li:hover{
+    .navbar nav ul li:hover{
         background-color: gray;
     }
 
-    .welcome{
-        width: 300px;
-        height: 200px;
+    .center{
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: 20% auto;
     }
-
-    .welcome h2{
-        font-size: 40px;
-    }
-    .parrafo{
-        margin-left: 400px;
-    }
-
+    
     .block-container{
         display: flex;
         align-items: center;
@@ -67,13 +116,23 @@
         padding: 4px;
         border: 1px solid gray;
     }
+
+    footer{
+        text-align: center;
+    }
 </style>
 <body>
-    <div class="cabecera">
-        Cabecera para sing in y log in
-    </div>
-    <div class="head">
+    <header>
         <h1>Programacion De Pocos Requisitos</h1>
+        <div>
+        <p>Te gustaria aportar comentarios?</p>
+        <button id="iniciar-sesion">Inicia sesion</button>
+        o
+        <button href="/"id="registrarme">Registrate</button>
+    </div>
+    </header>
+    <div class="navbar">
+        
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
@@ -85,13 +144,16 @@
         </nav>
     </div>
 
-    <div class="welcome">
+    <div class="center">
+        <aside>
         <h2>Pasele pasele, aqui se programa, se juega, se perrea y frikea, tengo de todo primo. </h2>
-    </div>
-    <div class="parrafo">
+    </aside>
+
+    <div id="main-content">
     <p>Bienvenido a mi pequenno mundo, lleno de Data procesada por mi cabeza y hermosamente organizada 
         con el cual podras, discutir las bases de la programacion, platicar acerca de temas de interes entre programadores como la final de lol, lidiar con la ansiedad social y esas cosas. Adoptamos el estilo de vida del programador con un nihilismo optimista.
     </p>
+</div>
 </div>
 
     <div class="block-container">
@@ -108,6 +170,9 @@
                 <p>Blogpost de conciencia sobre la importancia de Excel en el mundo laboral</p>
                  </div>
     </div>
+    <footer>
+        Jhovani Aguirre &copy; 2022
+    </footer>
 
 </body>
 </html>
